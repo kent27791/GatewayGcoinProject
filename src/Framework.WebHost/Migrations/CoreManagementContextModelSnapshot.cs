@@ -183,9 +183,25 @@ namespace Framework.WebHost.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime?>("CreatedOn");
+
+                    b.Property<string>("GatewayId");
+
+                    b.Property<decimal>("Gcoin");
+
+                    b.Property<string>("GcoinId");
+
                     b.Property<long>("MerchantId");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("PartnerId");
+
+                    b.Property<string>("Result");
+
+                    b.Property<int>("Status");
+
+                    b.Property<int>("Type");
+
+                    b.Property<DateTime?>("UpdatedOn");
 
                     b.HasKey("Id");
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Framework.Module.Gateway.Services;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,16 @@ namespace Framework.Module.Gateway.Controllers
     [Route("api/order")]
     public class OrderController : Controller
     {
-        public OrderController()
+        private readonly ITransactionService _transactionService;
+        public OrderController(ITransactionService transactionService)
         {
-
+            this._transactionService = transactionService;
         }
 
         [Route("create")]
         public IActionResult Create()
         {
+            var result = _transactionService.FindAll();
             return Json("ok");
         }
     }
