@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Gateway.Controllers
 {
-    [Route("api/order")]
-    public class OrderController : Controller
+    [Route("api/send-order")]
+    public class SendOrderController : Controller
     {
         private readonly ITransactionService _transactionService;
-        public OrderController(ITransactionService transactionService)
+        public SendOrderController(ITransactionService transactionService)
         {
             this._transactionService = transactionService;
         }
