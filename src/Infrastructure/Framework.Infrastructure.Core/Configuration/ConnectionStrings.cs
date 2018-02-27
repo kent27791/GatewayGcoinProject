@@ -6,6 +6,6 @@ namespace Framework.Infrastructure.Core.Configuration
 {
     public class ConnectionStrings
     {
-        public string CoreManagement { get; set; }
+        public string GatewayManagement { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Framework.Module.Core.Data
 {
     public class CoreCustomModelBuilder : ICustomModelBuilder
     {
-        //public string ContextName => "CoreManagementContext";
+        //public string ContextName => "GatewayManagementContext";
 
         public void Build(ModelBuilder modelBuilder)
         {

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Gateway.Services
 {
-    public class TransactionService : BaseService<CoreManagementContext, Transaction, long>, ITransactionService
+    public class TransactionService : BaseService<GatewayManagementContext, Transaction, long>, ITransactionService
     {
-        public TransactionService(IRepository<CoreManagementContext, Transaction, long> repository) : base(repository)
+        public TransactionService(IRepository<GatewayManagementContext, Transaction, long> repository) : base(repository)
         {
 
         }

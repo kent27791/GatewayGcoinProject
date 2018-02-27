@@ -45,6 +45,7 @@ namespace Framework.WebHost
             services.AddCustomizedMvc(GlobalConfiguration.Modules);
             services.AddCustomizedCors();
             services.AddCustomizedAutoMapper();
+            services.AddCustomizedSwagger();
 
             services.AddScoped<SignInManager<User>, CoreSignInManager<User>>();
             services.AddScoped<IWorkContext, WorkContext>();
@@ -70,6 +71,7 @@ namespace Framework.WebHost
             app.UseCustomizedIdentity();
             app.UseCustomizedMvc();
             app.UseCustomizedCors();
+            app.UseCustomizedSwagger();
         }
     }
 }

@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Core.Data
 {
-    public class CoreManagementContext :
+    public class GatewayManagementContext :
         IdentityDbContext<User, Role, long, IdentityUserClaim<long>, UserRole, IdentityUserLogin<long>, IdentityRoleClaim<long>,
-        IdentityUserToken<long>>, IDatabaseContext<CoreManagementContext>
+        IdentityUserToken<long>>, IDatabaseContext<GatewayManagementContext>
     {
-        public CoreManagementContext(DbContextOptions<CoreManagementContext> options) : base(options)
+        public GatewayManagementContext(DbContextOptions<GatewayManagementContext> options) : base(options)
         {
-
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

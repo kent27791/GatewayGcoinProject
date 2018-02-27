@@ -18,9 +18,9 @@ namespace Framework.Module.Core.Extentions
         private User _currentUser;
         private UserManager<User> _userManager;
         private HttpContext _httpContext;
-        private IRepository<CoreManagementContext, User, long> _userRepository;
+        private IRepository<GatewayManagementContext, User, long> _userRepository;
 
-        public WorkContext(UserManager<User> userManager, IHttpContextAccessor contextAccessor, IRepository<CoreManagementContext, User, long> userRepository)
+        public WorkContext(UserManager<User> userManager, IHttpContextAccessor contextAccessor, IRepository<GatewayManagementContext, User, long> userRepository)
         {
             _userManager = userManager;
             _httpContext = contextAccessor.HttpContext;

@@ -10,8 +10,8 @@ using System;
 
 namespace Framework.WebHost.Migrations
 {
-    [DbContext(typeof(CoreManagementContext))]
-    partial class CoreManagementContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(GatewayManagementContext))]
+    partial class GatewayManagementContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

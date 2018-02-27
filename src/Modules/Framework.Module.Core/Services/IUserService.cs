@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Core.Services
 {
-    public interface IUserService : IService<CoreManagementContext, User, long>
+    public interface IUserService : IService<GatewayManagementContext, User, long>
     {
         IEnumerable<UserPermission> PermissionByUser(long userId);
 

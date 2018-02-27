@@ -19,7 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Framework.Infrastructure.Common\Framework.Infrastructure.Common.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Framework.Infrastructure.Core\Framework.Infrastructure.Core.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Framework.Infrastructure.Data\Framework.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Framework.Infrastructure.Service\Framework.Infrastructure.Service.csproj" />
   </ItemGroup>
 

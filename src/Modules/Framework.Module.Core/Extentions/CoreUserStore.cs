@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Core.Extentions
 {
-    public class CoreUserStore : UserStore<User, Role, CoreManagementContext, long, IdentityUserClaim<long>, UserRole,
+    public class CoreUserStore : UserStore<User, Role, GatewayManagementContext, long, IdentityUserClaim<long>, UserRole,
         IdentityUserLogin<long>, IdentityUserToken<long>, IdentityRoleClaim<long>>
     {
-        public CoreUserStore(CoreManagementContext context, IdentityErrorDescriber describer) : base(context, describer)
+        public CoreUserStore(GatewayManagementContext context, IdentityErrorDescriber describer) : base(context, describer)
         {
 
         }

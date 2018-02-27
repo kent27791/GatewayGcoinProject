@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Serialization;
+using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -139,8 +140,8 @@ namespace Framework.WebHost.Extentions
 
         public static IServiceCollection AddCustomizedDataStore(this IServiceCollection services, ISettings settings)
         {
-            services.AddDbContext<CoreManagementContext>(dbOptions =>
-                dbOptions.UseSqlServer(settings.ConnectionStrings.CoreManagement, sqlOptions =>
+            services.AddDbContext<GatewayManagementContext>(dbOptions =>
+                dbOptions.UseSqlServer(settings.ConnectionStrings.GatewayManagement, sqlOptions =>
                     sqlOptions.MigrationsAssembly("Framework.WebHost")));
 
             return services;
@@ -193,10 +194,10 @@ namespace Framework.WebHost.Extentions
 
         public static IServiceCollection AddCustomizedSwagger(this IServiceCollection services)
         {
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new Info { Title = "Payment api document", Version = "v1" });
-            //});
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Gateway api documentation", Version = "v1" });
+            });
             return services;
         }
 

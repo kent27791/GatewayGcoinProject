@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Core.Extentions
 {
-    public class CoreRoleStore : RoleStore<Role, CoreManagementContext, long, UserRole, IdentityRoleClaim<long>>
+    public class CoreRoleStore : RoleStore<Role, GatewayManagementContext, long, UserRole, IdentityRoleClaim<long>>
     {
-        public CoreRoleStore(CoreManagementContext context, IdentityErrorDescriber describer)
+        public CoreRoleStore(GatewayManagementContext context, IdentityErrorDescriber describer)
             : base(context, describer)
         {
 

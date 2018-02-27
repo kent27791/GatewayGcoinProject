@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Core.Services
 {
-    public class UserService : BaseService<CoreManagementContext, User, long>, IUserService
+    public class UserService : BaseService<GatewayManagementContext, User, long>, IUserService
     {
-        public UserService(IRepository<CoreManagementContext, User, long> repository) : base(repository)
+        public UserService(IRepository<GatewayManagementContext, User, long> repository) : base(repository)
         {
 
         }

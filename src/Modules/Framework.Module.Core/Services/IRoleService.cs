@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Core.Services
 {
-    public interface IRoleService : IService<CoreManagementContext, Role, long>
+    public interface IRoleService : IService<GatewayManagementContext, Role, long>
     {
 
     }

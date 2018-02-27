@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Core.Services
 {
-    public class RoleService : BaseService<CoreManagementContext, Role, long>, IRoleService
+    public class RoleService : BaseService<GatewayManagementContext, Role, long>, IRoleService
     {
-        public RoleService(IRepository<CoreManagementContext, Role, long> repository) : base(repository)
+        public RoleService(IRepository<GatewayManagementContext, Role, long> repository) : base(repository)
         {
 
         }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Framework.Module.Gateway.Services
 {
-    public interface ITransactionService : IService<CoreManagementContext, Transaction, long>
+    public interface ITransactionService : IService<GatewayManagementContext, Transaction, long>
     {
 
     }

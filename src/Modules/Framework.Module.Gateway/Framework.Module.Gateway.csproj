@@ -29,8 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\Framework.Infrastructure.Core\Framework.Infrastructure.Core.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\Framework.Infrastructure.Service\Framework.Infrastructure.Service.csproj" />
     <ProjectReference Include="..\Framework.Module.Core\Framework.Module.Core.csproj" />
   </ItemGroup>
 

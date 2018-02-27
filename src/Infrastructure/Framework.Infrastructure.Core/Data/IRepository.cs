@@ -21,6 +21,8 @@ namespace Framework.Infrastructure.Core.Data
 
         void Delete(TEntity entity);
 
+        void Reload(TEntity entity);
+
         IQueryable<TEntity> FromSql(RawSqlString sql, params object[] parameters);
 
         IDbConnection GetDbConnection();
